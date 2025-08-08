@@ -1,5 +1,5 @@
 function Content() {
-  return <div>Content</div>;
+  return <div>Contents</div>;
 }
 
 export default Content;
