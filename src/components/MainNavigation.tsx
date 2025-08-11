@@ -21,11 +21,14 @@ interface MainNavigationProps {
 export function NavigationMenuDemo({ items }: MainNavigationProps) {
   return (
     <>
-      <div className="hidden gap-6 lg:flex items-center">
-        <div className="flex">
+      <div className="hidden gap-6 lg:flex">
+        <div className="flex items-center">
           <div className="">
-            <Link to="/" className="text-2xl font-bold flex space-x-4">
-              <Icons.logo className="size-7" />
+            <Link
+              to="/"
+              className="text-2xl font-bold items-center flex space-x-4"
+            >
+              <Icons.logo className="size-7 mr-4" />
               <p className="inline-block">{siteConfig.name}</p>
             </Link>
           </div>
