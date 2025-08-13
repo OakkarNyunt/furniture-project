@@ -10,6 +10,7 @@ function Header() {
           <MainNavigation items={siteConfig.mainNav} />
           <MobileNavigation items={siteConfig.mainNav} />
         </nav>
+        <div className="">ok</div>
       </header>
     </>
   );
