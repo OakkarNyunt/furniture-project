@@ -59,7 +59,7 @@ export default function NewsLetterForm() {
                 type="submit"
                 variant="secondary"
                 size="icon"
-                className="size-7 text-black absolute top-[60px] right-[25px] z-20"
+                className="size-7 text-black absolute top-[58px] right-[25px] z-20"
               >
                 {Loading ? (
                   <Loader2Icon className="animate-spin" />

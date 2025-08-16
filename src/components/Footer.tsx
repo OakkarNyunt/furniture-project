@@ -9,9 +9,9 @@ function Footer() {
     <>
       <div className="">
         <footer className="border-t-2">
-          <section className="container ml-4 flex flex-col md:flex-row md:items-start mx-auto py-6 space-y-6 md:space-y-0 md:space-x-4">
+          <section className="container flex flex-col lg:flex-row  mx-auto py-6 space-y-6 md:space-y-0 md:space-x-4">
             {/* Logo & Name */}
-            <div className="flex items-center space-x-2 justify-center">
+            <div className="flex items-center justify-center">
               <Link to="/" className=" md:flex">
                 <Icons.logo className="size-8" />
               </Link>
@@ -23,7 +23,7 @@ function Footer() {
             </div>
 
             {/* Footer Nav */}
-            <section className="grid grid-cols-2 gap-10 mx-auto lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-10 mx-auto lg:grid-cols-4">
               {siteConfig.footerNav.map((footer) => (
                 <div key={footer.title} className="space-y-2">
                   <h4 className="font-bold mb-4">{footer.title}</h4>
@@ -45,12 +45,12 @@ function Footer() {
                   ))}
                 </div>
               ))}
-            </section>
+            </div>
 
             {/* Newsletter */}
-            <section className="flex flex-row md:flex-col flex-1 mx-auto">
+            <div className="flex  justify-center ">
               <NewsLetterForm />
-            </section>
+            </div>
           </section>
         </footer>
       </div>

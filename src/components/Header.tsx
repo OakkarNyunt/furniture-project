@@ -6,7 +6,7 @@ import { ModeToggle } from "./mode-toggle";
 function Header() {
   return (
     <>
-      <header>
+      <header className="sticky top-0 z-50 bg-background overflow-hidden">
         <nav className="container border-b-2 border-gray-200 py-4 items-center mx-auto flex justify-between">
           <div className="flex items-center gap-4">
             <MainNavigation items={siteConfig.mainNav} />
