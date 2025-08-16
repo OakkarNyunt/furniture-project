@@ -27,4 +27,19 @@ export type Product = {
   status: string;
 };
 
+export type Tag = {
+  name: string;
+};
+
+export type Post = {
+  id: string;
+  author: string;
+  title: string;
+  content: string;
+  image: string;
+  body: string;
+  updated_at: string;
+  tags: Tag[];
+};
+
 export type MainNavItem = NavItemWithChildren;

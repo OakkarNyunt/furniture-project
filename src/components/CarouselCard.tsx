@@ -24,7 +24,7 @@ export function CarouselCard({ items }: ProductProps) {
         }),
       ]}
     >
-      <CarouselContent className="-ml-1">
+      <CarouselContent className="-ml-1 mx-auto container">
         {items.map((product) => (
           <CarouselItem
             key={product.id}
@@ -39,7 +39,9 @@ export function CarouselCard({ items }: ProductProps) {
                     className="  object-cover mb-4 size-30"
                   />
                   <h2 className="text-lg font-semibold">{product.name}</h2>
-                  <p className="text-sm text-gray-600">{product.description}</p>
+                  <p className="text-sm text-gray-600 line-clamp-2">
+                    {product.description}
+                  </p>
                   <p className="text-xl font-bold mt-2">
                     ${product.price.toFixed(2)}
                   </p>

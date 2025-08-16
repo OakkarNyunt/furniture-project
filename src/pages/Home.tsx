@@ -1,10 +1,30 @@
 import Chair from "@/assets/data/images/chair.png";
+import BlogCard from "@/components/BlogCard";
 import { CarouselCard } from "@/components/CarouselCard";
 import { Button } from "@/components/ui/button";
 
 import { products } from "@/type/products";
+import { posts } from "@/type/posts";
 
+import { Link } from "react-router-dom";
+
+interface subTitleProps {
+  title: string;
+  href: string;
+  subTitle: string;
+}
+
+const slicePosts = posts.slice(0, 3);
 function Home() {
+  const SubTitle = ({ title, href, subTitle }: subTitleProps) => (
+    <div className="flex justify-between my-8">
+      <div className="lg:text-3xl font-bold">{title}</div>
+
+      <div className="text-xl underline text-muted-foreground hover:font-bold">
+        <Link to={href}>{subTitle}</Link>
+      </div>
+    </div>
+  );
   return (
     <>
       <main className="container mx-auto p-4">
@@ -15,21 +35,25 @@ function Home() {
             </h1>
             <p className="text-fold text-3xl">Open your smart life.</p>
             <div className="flex justify-evenly">
-              <Button className="px-12 py-5 bg-amber-700 hover:bg-black">
+              <Button className="px-12 py-5 bg-amber-700 hover:bg-gray-500 hover:px-14 hover:py-6 cursor-pointer">
                 Shop Now
               </Button>
-              <Button className="px-12 py-5 hover:bg-amber-700">Explore</Button>
+              <Button className="px-12 py-5  hover:bg-gray-500 hover:px-14 hover:py-6 cursor-pointer">
+                Explore
+              </Button>
             </div>
           </div>
           <div className="flex justify-center mt-8 md:mt-0">
             <img
               src={Chair}
               alt=""
-              className="size-60 md:size-80 lg:size-150"
+              className="size-60 md:size-80 lg:size-120"
             />
           </div>
         </div>
         <CarouselCard items={products} />
+        <SubTitle title="Recent Blog" href="/blog" subTitle="See All" />
+        <BlogCard items={slicePosts} />
       </main>
     </>
   );
