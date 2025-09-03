@@ -3,6 +3,7 @@ import {
   HamburgerMenuIcon,
   PaperPlaneIcon,
   ExclamationTriangleIcon,
+  ArrowLeftIcon,
 } from "@radix-ui/react-icons";
 import type React from "react";
 
@@ -29,4 +30,5 @@ export const Icons = {
   menu: HamburgerMenuIcon,
   PaperPlane: PaperPlaneIcon,
   error: ExclamationTriangleIcon,
+  arrowLeft: ArrowLeftIcon,
 };

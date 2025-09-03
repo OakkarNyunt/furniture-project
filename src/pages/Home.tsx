@@ -52,7 +52,7 @@ function Home() {
           </div>
         </div>
         <CarouselCard items={products} />
-        <SubTitle title="Recent Blog" href="/blog" subTitle="See All" />
+        <SubTitle title="Recent Blog" href="/blogs" subTitle="See All" />
         <BlogCard items={slicePosts} />
       </main>
     </>

@@ -39,7 +39,7 @@ export type Post = {
   image: string;
   body: string;
   updated_at: string;
-  tags: Tag[];
+  // tags: Tag[];
 };
 
 export type MainNavItem = NavItemWithChildren;
