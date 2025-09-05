@@ -5,6 +5,7 @@ import {
   ExclamationTriangleIcon,
   ArrowLeftIcon,
   LayersIcon,
+  PlusIcon,
 } from "@radix-ui/react-icons";
 import type React from "react";
 
@@ -33,4 +34,5 @@ export const Icons = {
   error: ExclamationTriangleIcon,
   arrowLeft: ArrowLeftIcon,
   layer: LayersIcon,
+  plus: PlusIcon,
 };

@@ -7,6 +7,7 @@ import { products } from "@/type/products";
 import { posts } from "@/type/posts";
 
 import { Link } from "react-router-dom";
+import ProductCard from "./product/ProductCard";
 
 interface subTitleProps {
   title: string;
@@ -15,6 +16,7 @@ interface subTitleProps {
 }
 
 const slicePosts = posts.slice(0, 3);
+const sliceProducts = products.slice(0, 4);
 function Home() {
   const SubTitle = ({ title, href, subTitle }: subTitleProps) => (
     <div className="flex justify-between my-8">
@@ -52,6 +54,17 @@ function Home() {
           </div>
         </div>
         <CarouselCard items={products} />
+        <SubTitle
+          title="Featured Products"
+          href="/products"
+          subTitle="See All"
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {sliceProducts.map((product) => (
+            <ProductCard product={product} key={product.id} />
+          ))}
+        </div>
+
         <SubTitle title="Recent Blog" href="/blogs" subTitle="See All" />
         <BlogCard items={slicePosts} />
       </main>
