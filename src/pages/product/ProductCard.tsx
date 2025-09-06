@@ -37,7 +37,7 @@ function ProductCard({ product }: ProductCardProps) {
         <CardDescription className="text-lg space-x-8">
           ${product.price}
           {product.discount > 0 ? (
-            <span className="ml-2"> ${product.discount}</span>
+            <span className="ml-2 line-through"> ${product.discount}</span>
           ) : (
             ""
           )}

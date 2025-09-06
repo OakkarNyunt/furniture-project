@@ -42,4 +42,9 @@ export type Post = {
   // tags: Tag[];
 };
 
+export type Category = {
+  id: string;
+  label: string;
+};
+
 export type MainNavItem = NavItemWithChildren;
