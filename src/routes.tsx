@@ -8,8 +8,9 @@ import BlogDetails from "./pages/blog/BlogDetails";
 
 import BlogRootLayout from "./pages/blog/BlogRootLayout";
 import ProductRootLayout from "./pages/product/ProductRootLayout";
-import Product from "./pages/product/Product";
+
 import ProductDetails from "./pages/product/ProductDetails";
+import Product from "@/pages/product/Product";
 
 export const router = createBrowserRouter([
   {

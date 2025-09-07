@@ -1,14 +1,14 @@
 import ProductCard from "./ProductCard";
 import { ProductFilter } from "./ProductFilter";
 import { filterList, products } from "@/type/products";
-import type { Product } from "@/type";
+// import type { Product } from "@/type";
 import PaginationSample from "@/components/Pagination";
 
 // interface ProductCardProps {
 //   product: Product;
 // }
 
-function Product() {
+function ProductPage() {
   return (
     <div className="container mx-auto">
       <section className="flex flex-col md:flex-row">
@@ -35,4 +35,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default ProductPage;
