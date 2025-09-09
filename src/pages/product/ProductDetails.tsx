@@ -11,6 +11,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Separator } from "@/components/ui/separator";
 import Rating from "./Rating";
 import AddToFavourite from "./AddToFavourite";
+import AddToCart from "./AddToCard";
 
 function ProductDetails() {
   const { productId } = useParams();
@@ -65,6 +66,7 @@ function ProductDetails() {
                 <Rating rating={product?.rating ?? 0} />
                 <AddToFavourite />
               </div>
+              <AddToCart isBuy={product?.status === "active" ? true : false} />
             </div>
           </div>
         </section>
