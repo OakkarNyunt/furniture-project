@@ -13,6 +13,13 @@ import Rating from "./Rating";
 import AddToFavourite from "./AddToFavourite";
 import AddToCart from "./AddToCard";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 function ProductDetails() {
   const { productId } = useParams();
   const product = products.find((product) => product.id === productId);
@@ -68,6 +75,17 @@ function ProductDetails() {
               </div>
               <AddToCart isBuy={product?.status === "active" ? true : false} />
             </div>
+            <Separator className="my-8" />
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-xl">
+                  Description
+                </AccordionTrigger>
+                <AccordionContent>
+                  {product?.description ?? "Description not available."}
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
         <section>

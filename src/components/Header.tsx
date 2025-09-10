@@ -3,6 +3,9 @@ import { siteConfig } from "@/config/site";
 import MobileNavigation from "@/components/MobileNavigation";
 import { ModeToggle } from "./mode-toggle";
 
+import { User } from "@/assets/data/User";
+import UserProfile from "./UserProfile";
+
 function Header() {
   return (
     <header className="container mx-auto bg-background ">
@@ -14,6 +17,7 @@ function Header() {
         <div className="mr-8 lg:mr-0">
           <ModeToggle />
         </div>
+        <UserProfile data={User} />
       </nav>
     </header>
   );
