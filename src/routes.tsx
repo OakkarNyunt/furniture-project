@@ -4,6 +4,9 @@ import Home from "@/pages/Home";
 import AboutPage from "@/pages/About";
 import NotFoundPages from "./pages/NotFoundPages";
 import { lazy, Suspense } from "react";
+
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
 // import Blog from "./pages/blog/Blog";
 // import BlogDetails from "./pages/blog/BlogDetails";
 
@@ -56,4 +59,6 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  { path: "/login", Component: Login },
+  { path: "/register", Component: Register },
 ]);

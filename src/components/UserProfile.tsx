@@ -65,7 +65,10 @@ function UserProfile({ data }: UserProfileProps) {
         <DropdownMenuSeparator />
 
         <DropdownMenuItem>
-          Log out
+          <Link to="/login" className="w-full">
+            Log out
+          </Link>
+
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>
