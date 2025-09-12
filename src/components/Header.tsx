@@ -5,6 +5,7 @@ import { ModeToggle } from "./mode-toggle";
 
 import { User } from "@/assets/data/User";
 import UserProfile from "./UserProfile";
+import { CardSheet } from "./CardSheet";
 
 function Header() {
   return (
@@ -17,6 +18,7 @@ function Header() {
         <div className="mr-8 lg:mr-0">
           <ModeToggle />
         </div>
+        <CardSheet />
         <UserProfile data={User} />
       </nav>
     </header>
