@@ -56,4 +56,19 @@ export type Category = {
   label: string;
 };
 
+export type Cart = {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  // image: string;
+  image: {
+    id: string;
+    name: string;
+    url: string;
+  };
+  category: string;
+  subcategory: string;
+};
+
 export type MainNavItem = NavItemWithChildren;

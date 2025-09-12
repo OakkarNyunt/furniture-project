@@ -10,6 +10,9 @@ import {
   HeartIcon,
   MinusIcon,
   GearIcon,
+  TrashIcon,
+  PersonIcon,
+  ExitIcon,
 } from "@radix-ui/react-icons";
 import type React from "react";
 
@@ -43,4 +46,7 @@ export const Icons = {
   heart: HeartIcon,
   minus: MinusIcon,
   setting: GearIcon,
+  trash: TrashIcon,
+  person: PersonIcon,
+  exit: ExitIcon,
 };

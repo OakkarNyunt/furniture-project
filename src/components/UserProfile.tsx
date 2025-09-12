@@ -13,6 +13,7 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Icons } from "./Icons";
 
 interface UserProfileProps {
   data: User;
@@ -53,11 +54,12 @@ function UserProfile({ data }: UserProfileProps) {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            Icons ? Profile
+            <Icons.person /> Profile
             <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
 
           <DropdownMenuItem>
+            <Icons.setting />
             Settings
             <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
           </DropdownMenuItem>
@@ -65,11 +67,9 @@ function UserProfile({ data }: UserProfileProps) {
         <DropdownMenuSeparator />
 
         <DropdownMenuItem>
-          <Link to="/login" className="w-full">
-            Log out
-          </Link>
-
-          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+          <Icons.exit />
+          Log Out
+          <DropdownMenuShortcut>⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
