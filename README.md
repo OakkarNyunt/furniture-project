@@ -1,8 +1,12 @@
 ## Guide
 
-1.npm install
+```
+npm install
+```
 
-2.npm run dev
+```
+npm run dev
+```
 
 project is running at http://localhost:1998
 
